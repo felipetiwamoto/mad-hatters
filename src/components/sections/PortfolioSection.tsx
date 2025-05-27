@@ -22,23 +22,14 @@ export const PortfolioSection: React.FC<BaseSectionProps> = ({ color = '#8cb964'
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="flex mb-12 mx-auto">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden group">
-              <div className="aspect-square bg-slate-200 relative h-[250px] w-full">
-                <img
-                  src={herdeiSistema}
-                  alt={project.title}
-                  className="object-cover w-full h-full transition-transform duration-300" />
-                {/* <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <Button variant="secondary">Visitar</Button>
-                </div> */}
-              </div>
+            <Card key={index} className="group border-none shadow-none w-[250px] mx-auto">
               <CardContent className="p-4">
                 <img
                   src={herdeiLogo}
                   alt={project.title}
-                  className="mx-auto" />
+                  className="mx-auto h-[60px] max-w-none object-contain" />
               </CardContent>
             </Card>
           ))}
